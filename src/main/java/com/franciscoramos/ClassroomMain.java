@@ -2,7 +2,7 @@ package com.franciscoramos;
 
 import corejava.Console;
 
-public class MainClassroom
+public class ClassroomMain
 {
     public void run()
     {

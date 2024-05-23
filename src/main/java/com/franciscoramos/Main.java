@@ -6,9 +6,9 @@ public class Main
 {
     public static void main(String[] args)
     {
-        MainStudent mainStudent = new MainStudent();
-        MainDiscipline mainDiscipline = new MainDiscipline();
-        MainClassroom mainClassroom = new MainClassroom();
+        StudentMain studentMain = new StudentMain();
+        DisciplineMain disciplineMain = new DisciplineMain();
+        ClassroomMain classroomMain = new ClassroomMain();
 
         boolean looping = true;
         while(looping)
@@ -24,9 +24,9 @@ public class Main
 
             switch (result)
             {
-                case 1 -> mainStudent.run();
-                case 2 -> mainDiscipline.run();
-                case 3 -> mainClassroom.run();
+                case 1 -> studentMain.run();
+                case 2 -> disciplineMain.run();
+                case 3 -> classroomMain.run();
                 case 4 -> looping = false;
                 default -> System.out.println("Opção Inválida\n");
             }

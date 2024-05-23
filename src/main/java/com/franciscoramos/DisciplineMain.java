@@ -2,7 +2,7 @@ package com.franciscoramos;
 
 import corejava.Console;
 
-public class MainDiscipline
+public class DisciplineMain
 {
 
     public void run()

@@ -1,8 +1,9 @@
 package com.franciscoramos;
 
+import com.franciscoramos.model.Student;
 import corejava.Console;
 
-public class MainStudent
+public class StudentMain
 {
 
     public void run()
