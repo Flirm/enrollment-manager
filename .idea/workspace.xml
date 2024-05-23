@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e95799f3-2b9f-465e-85a8-cae113e1e6da" name="Changes" comment="feat: added base service classes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/ClassroomMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/ClassroomMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/DisciplineMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/DisciplineMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/StudentMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/StudentMain.java" afterDir="false" />
+    <list default="true" id="e95799f3-2b9f-465e-85a8-cae113e1e6da" name="Changes" comment="feat: added service to main classes">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +87,7 @@
       <workItem from="1716467889000" duration="194000" />
       <workItem from="1716469509200" duration="11874000" />
       <workItem from="1716484980496" duration="30000" />
-      <workItem from="1716485022629" duration="3530000" />
+      <workItem from="1716485022629" duration="3710000" />
     </task>
     <task id="LOCAL-00001" summary="add basic-options-ui">
       <option name="closed" value="true" />
@@ -148,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716488631195</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: added service to main classes">
+      <option name="closed" value="true" />
+      <created>1716488711669</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716488711669</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +166,7 @@
     <MESSAGE value="feat: added dao factory" />
     <MESSAGE value="feat: added base dao classes and interfaces" />
     <MESSAGE value="feat: added base service classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: added base service classes" />
+    <MESSAGE value="feat: added service to main classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added service to main classes" />
   </component>
 </project>
