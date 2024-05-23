@@ -7,18 +7,20 @@ public class Classroom
     private String name;
     private String schoolTerm;
     private Discipline discipline;
+    private Theacher teacher;
 
-    public Classroom(Discipline discipline, String schoolTerm)
+    public Classroom(Discipline discipline, String schoolTerm, Theacher teacher)
     {
         this.id = Integer.parseInt(String.valueOf(count++) + String.valueOf(discipline.getId()) + schoolTerm);
         this.name = discipline.getName();
         this.schoolTerm = schoolTerm;
         this.discipline = discipline;
+        this.teacher = teacher;
     }
 
     public String toString()
     {
-        return "Nome: " + this.name + "\nPeríodo: " + this.schoolTerm + "\nId: " + this.id + "\n";
+        return "Nome: " + this.name + "\nProfessor: "+ this.teacher + "\nPeríodo: " + this.schoolTerm + "\nId: " + this.id + "\n";
     }
 
     public int getId() {return this.id;}
@@ -32,4 +34,7 @@ public class Classroom
 
     public Discipline getDiscipline() {return this.discipline;}
     public void setDiscipline(Discipline discipline) {this.discipline = discipline;}
+
+    public Theacher getTeacher() {return this.teacher;}
+    public void setTeacher(Theacher teacher) {this.teacher = teacher;}
 }

@@ -1,15 +1,15 @@
 package com.franciscoramos.model;
 
-public class Student
+public class Theacher
 {
     private static int count = 0;
     private int id;
     private String name;
     private String email;
 
-    public Student(String name, String email)
+    public Theacher(String name, String email)
     {
-        this.id = Integer.parseInt("0" + count++);
+        this.id = Integer.parseInt("1" + count++);
         this.name = name;
         this.email = email;
     }
