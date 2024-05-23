@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e95799f3-2b9f-465e-85a8-cae113e1e6da" name="Changes" comment="docs: added discord.xml to .gitignore">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Theacher.java" afterDir="false" />
+    <list default="true" id="e95799f3-2b9f-465e-85a8-cae113e1e6da" name="Changes" comment="feat: added teacher object and changed student id format">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Theacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Theacher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +89,7 @@
       <workItem from="1716467889000" duration="194000" />
       <workItem from="1716469509200" duration="11874000" />
       <workItem from="1716484980496" duration="30000" />
-      <workItem from="1716485022629" duration="4637000" />
+      <workItem from="1716485022629" duration="6467000" />
     </task>
     <task id="LOCAL-00001" summary="add basic-options-ui">
       <option name="closed" value="true" />
@@ -163,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716488953656</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat: added teacher object and changed student id format">
+      <option name="closed" value="true" />
+      <created>1716490161513</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1716490161513</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +186,7 @@
     <MESSAGE value="feat: added base service classes" />
     <MESSAGE value="feat: added service to main classes" />
     <MESSAGE value="docs: added discord.xml to .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: added discord.xml to .gitignore" />
+    <MESSAGE value="feat: added teacher object and changed student id format" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added teacher object and changed student id format" />
   </component>
 </project>

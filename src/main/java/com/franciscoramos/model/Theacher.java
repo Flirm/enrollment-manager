@@ -1,11 +1,14 @@
 package com.franciscoramos.model;
 
+import java.util.ArrayList;
+
 public class Theacher
 {
     private static int count = 0;
     private int id;
     private String name;
     private String email;
+    private ArrayList<Classroom> classrooms;
 
     public Theacher(String name, String email)
     {
