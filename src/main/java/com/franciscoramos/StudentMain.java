@@ -1,10 +1,11 @@
 package com.franciscoramos;
 
-import com.franciscoramos.model.Student;
+import com.franciscoramos.service.StudentService;
 import corejava.Console;
 
 public class StudentMain
 {
+    private final StudentService studentService = new StudentService();
 
     public void run()
     {

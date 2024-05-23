@@ -1,9 +1,11 @@
 package com.franciscoramos;
 
+import com.franciscoramos.service.DisciplineService;
 import corejava.Console;
 
 public class DisciplineMain
 {
+    private final DisciplineService disciplineService = new DisciplineService();
 
     public void run()
     {

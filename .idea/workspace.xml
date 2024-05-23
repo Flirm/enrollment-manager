@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e95799f3-2b9f-465e-85a8-cae113e1e6da" name="Changes" comment="refactor: rename-classes">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Classroom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Discipline.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Student.java" afterDir="false" />
+    <list default="true" id="e95799f3-2b9f-465e-85a8-cae113e1e6da" name="Changes" comment="feat: added base service classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/ClassroomMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/ClassroomMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/DisciplineMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/DisciplineMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/StudentMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/StudentMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +18,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -56,7 +56,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Pichau/Desktop/Tudo/UFF/POO/introducao-16-DAOGenerico-completo&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Pichau/.m2/repository/org/reflections/0.10.2/reflections-0.10.2.jar&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -65,6 +65,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -87,7 +88,9 @@
       <workItem from="1716311657040" duration="1681000" />
       <workItem from="1716386497239" duration="1059000" />
       <workItem from="1716467889000" duration="194000" />
-      <workItem from="1716469509200" duration="10238000" />
+      <workItem from="1716469509200" duration="11874000" />
+      <workItem from="1716484980496" duration="30000" />
+      <workItem from="1716485022629" duration="3530000" />
     </task>
     <task id="LOCAL-00001" summary="add basic-options-ui">
       <option name="closed" value="true" />
@@ -113,7 +116,39 @@
       <option name="project" value="LOCAL" />
       <updated>1716482364906</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: added model classes">
+      <option name="closed" value="true" />
+      <created>1716482573950</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716482573950</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: added dao factory">
+      <option name="closed" value="true" />
+      <created>1716488503958</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716488503958</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: added base dao classes and interfaces">
+      <option name="closed" value="true" />
+      <created>1716488575784</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716488575784</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: added base service classes">
+      <option name="closed" value="true" />
+      <created>1716488631195</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716488631195</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +157,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add basic-options-ui" />
     <MESSAGE value="refactor: rename-classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: rename-classes" />
+    <MESSAGE value="feat: added model classes" />
+    <MESSAGE value="feat: added dao factory" />
+    <MESSAGE value="feat: added base dao classes and interfaces" />
+    <MESSAGE value="feat: added base service classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added base service classes" />
   </component>
 </project>
