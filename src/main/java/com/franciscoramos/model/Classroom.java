@@ -7,9 +7,9 @@ public class Classroom
     private String name;
     private String schoolTerm;
     private Discipline discipline;
-    private Theacher teacher;
+    private Teacher teacher;
 
-    public Classroom(Discipline discipline, String schoolTerm, Theacher teacher)
+    public Classroom(Discipline discipline, String schoolTerm, Teacher teacher)
     {
         this.id = Integer.parseInt(String.valueOf(count++) + String.valueOf(discipline.getId()) + schoolTerm);
         this.name = discipline.getName();
@@ -35,6 +35,6 @@ public class Classroom
     public Discipline getDiscipline() {return this.discipline;}
     public void setDiscipline(Discipline discipline) {this.discipline = discipline;}
 
-    public Theacher getTeacher() {return this.teacher;}
-    public void setTeacher(Theacher teacher) {this.teacher = teacher;}
+    public Teacher getTeacher() {return this.teacher;}
+    public void setTeacher(Teacher teacher) {this.teacher = teacher;}
 }

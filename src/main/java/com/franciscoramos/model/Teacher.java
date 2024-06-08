@@ -2,7 +2,7 @@ package com.franciscoramos.model;
 
 import java.util.ArrayList;
 
-public class Theacher
+public class Teacher
 {
     private static int count = 0;
     private int id;
@@ -10,7 +10,7 @@ public class Theacher
     private String email;
     private ArrayList<Classroom> classrooms;
 
-    public Theacher(String name, String email)
+    public Teacher(String name, String email)
     {
         this.id = Integer.parseInt("1" + count++);
         this.name = name;
