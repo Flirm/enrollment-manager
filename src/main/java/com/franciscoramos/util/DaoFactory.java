@@ -2,36 +2,31 @@ package com.franciscoramos.util;
 
 import org.reflections.Reflections;
 
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-public class DaoFactory
-{
+public class DaoFactory {
     private static final Map<Class<?>, Object> map = new HashMap<>();
-
-    public static <T> T getDao(Class<T> type)
-    {
-        Object obj = map.get(type);
-        if(obj == null)
-        {
+    public static <T> T getDao(Class<T> tipo) {
+        Object obj = map.get(tipo);
+        if (obj == null) {
             Reflections reflections = new Reflections("com.franciscoramos.dao.impl");
-            Set<Class<? extends T>> classes = reflections.getSubTypesOf(type);
-            if(classes.size() != 1)
-            {
-                throw new RuntimeException("Deve haver uma e apenas uma classe que implementa a interface " + type.getName());
+            Set<Class<? extends T>> conjunto = reflections.getSubTypesOf(tipo);
+            if (conjunto.size() != 1) {
+                throw new RuntimeException(
+                        "Deve haver uma e apenas uma classe que implementa a interface " +
+                                tipo.getName());
             }
-            Class<? extends T> clazz = classes.iterator().next();
-            try
-            {
-                obj = clazz.getDeclaredConstructor().newInstance();
-                map.put(type, obj);
-            } catch(InstantiationException |
-                    IllegalAccessException |
-                    InvocationTargetException |
-                    NoSuchMethodException e){
+            Class<? extends T> classe = conjunto.iterator().next();
+            try {
+                obj = classe.getDeclaredConstructor().newInstance();
+                map.put(tipo, obj);
+            } catch (InstantiationException |
+                     IllegalAccessException |
+                     InvocationTargetException |
+                     NoSuchMethodException e) {
                 throw new RuntimeException(e);
             }
         }
