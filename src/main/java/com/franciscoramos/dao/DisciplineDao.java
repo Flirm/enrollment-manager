@@ -1,5 +1,7 @@
 package com.franciscoramos.dao;
 
-public interface DisciplineDao
+import com.franciscoramos.model.Discipline;
+
+public interface DisciplineDao extends GenericDao<Integer, Discipline>
 {
 }

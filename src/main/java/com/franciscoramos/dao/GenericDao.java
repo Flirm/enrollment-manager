@@ -1,9 +1,12 @@
 package com.franciscoramos.dao;
 
+import java.util.List;
+
 public interface GenericDao<K, V>
 {
     V create(K key, V value);
     V update(K key, V value);
-    V delete(K key);
-    V get(K key);
+    V remove(K key);
+    V read(K key);
+    List<V> readAll();
 }

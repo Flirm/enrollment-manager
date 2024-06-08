@@ -1,5 +1,7 @@
 package com.franciscoramos.dao;
 
-public interface StudentDao
+import com.franciscoramos.model.Student;
+
+public interface StudentDao extends GenericDao<Integer, Student>
 {
 }
