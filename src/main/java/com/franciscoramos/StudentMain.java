@@ -1,7 +1,13 @@
 package com.franciscoramos;
 
+import com.franciscoramos.exception.EntityNotFoundException;
+import com.franciscoramos.exception.StudentEnrolledException;
+import com.franciscoramos.model.Discipline;
+import com.franciscoramos.model.Student;
 import com.franciscoramos.service.StudentService;
 import corejava.Console;
+
+import java.util.List;
 
 public class StudentMain
 {
@@ -9,7 +15,9 @@ public class StudentMain
 
     public void run()
     {
-
+        String name;
+        String email;
+        Student student;
 
         boolean loop = true;
         while(loop)
@@ -28,26 +36,56 @@ public class StudentMain
 
             switch(result)
             {
-                case 1 ->{
-                    System.out.println("Matriculando\n");
+                case 1 ->{ //matricular
+                    name = Console.readLine("Informe o nome do aluno: ");
+                    email = name.charAt(0) + name.split(" ")[1].toLowerCase() + "@id.uff.br";
+                    student = new Student(name, email);
+                    studentService.create(student);
+                    System.out.println("Aluno " + name + " matriculado com sucesso!\n");
+                    System.out.println("Numero de Matricula: " + student.getId() + "\n");
+                    System.out.println("Email: " + email + "\n");
                 }
-                case 2 ->{
-                    System.out.println("Desmatriculando\n");
+                case 2 ->{ //desmatricular
+                    int id = Console.readInt("Informe a matricula do aluno: ");
+                    try
+                    {
+                        studentService.remove(id);
+                        System.out.println("Aluno " + id + " desmatriculado com sucesso!\n");
+                    } catch (EntityNotFoundException | StudentEnrolledException e) {
+                        System.out.println(e.getMessage() + "\n");
+                    }
                 }
-                case 3 ->{
+                case 3 ->{ //alterar
                     System.out.println("Alterando Aluno\n");
                 }
-                case 4 ->{
+                case 4 ->{ //inscrever em disciplina
                     System.out.println("Inscrevendo Aluno\n");
                 }
-                case 5 ->{
+                case 5 ->{ //trancar disciplina
                     System.out.println("Trancando disciplina\n");
                 }
-                case 6 ->{
-                    System.out.println("Listando alunos\n");
+                case 6 ->{ //listar alunos
+                    List<Student> students = studentService.readAll();
+                    System.out.println("Alunos matriculados no sistema:\n");
+                    for(Student studentInList : students)
+                    {
+                        System.out.println(studentInList);
+                    }
+
                 }
-                case 7 ->{
-                    System.out.println("Listando histórico do aluno\n");
+                case 7 ->{ //listar historico
+                    int id = Console.readInt("Informe a matricula do aluno: ");
+                    try
+                    {
+                        student = studentService.read(id);
+                        System.out.println("Histórico do aluno: " + student.getId() + "\n");
+                        for(Discipline discipline : student.getCompletedDisciplines().keySet()) {
+                            System.out.println("Nome: " + discipline + "\n");
+                            System.out.println("Nota: " + student.getCompletedDisciplines().get(discipline) + "\n");
+                        }
+                    }catch(EntityNotFoundException e){
+                        System.out.println(e.getMessage() + "\n");
+                    }
                 }
                 case 8 -> loop = false;
                 default -> System.out.println("Opção Inválida\n");

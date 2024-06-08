@@ -1,6 +1,7 @@
 package com.franciscoramos.model;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 
 public class Student
 {
@@ -8,7 +9,7 @@ public class Student
     private int id;
     private String name;
     private String email;
-    private ArrayList<Discipline> completedDisciplines;
+    private LinkedHashMap<Discipline, Integer> completedDisciplines;
     private ArrayList<Classroom> classrooms;
 
     public Student(String name, String email)
@@ -31,4 +32,8 @@ public class Student
 
     public String getEmail() {return email;}
     public void setEmail(String email) {this.email = email;}
+
+    public LinkedHashMap<Discipline, Integer> getCompletedDisciplines() {return completedDisciplines;}
+
+    public ArrayList<Classroom> getClassrooms() {return classrooms;}
 }

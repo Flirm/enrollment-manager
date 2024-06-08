@@ -4,13 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e95799f3-2b9f-465e-85a8-cae113e1e6da" name="Changes" comment="feat: added appropriated arraylists to student and teacher">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/TeacherMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/TeacherDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/TeacherDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/service/TeacherService.java" afterDir="false" />
+    <list default="true" id="e95799f3-2b9f-465e-85a8-cae113e1e6da" name="Changes" comment="feat: added Teacher main,service,dao,daoimpl classes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/exception/EntityNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/exception/StudentEnrolledException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Teacher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/StudentMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/StudentMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/ClassroomDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/ClassroomDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/DisciplineDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/DisciplineDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/GenericDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/GenericDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/StudentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/TeacherDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/TeacherDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/ClassroomDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/ClassroomDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/DisciplineDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/DisciplineDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/StudentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/StudentDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/TeacherDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/TeacherDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Classroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Classroom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Theacher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/util/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/util/DaoFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +54,9 @@
     &quot;accountId&quot;: &quot;9af733bc-fb16-462e-8a4b-89f50348da1c&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -64,10 +81,10 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -93,7 +110,8 @@
       <workItem from="1716469509200" duration="11874000" />
       <workItem from="1716484980496" duration="30000" />
       <workItem from="1716485022629" duration="6539000" />
-      <workItem from="1717191386478" duration="424000" />
+      <workItem from="1717191386478" duration="535000" />
+      <workItem from="1717861349149" duration="10700000" />
     </task>
     <task id="LOCAL-00001" summary="add basic-options-ui">
       <option name="closed" value="true" />
@@ -183,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716493842243</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="feat: added Teacher main,service,dao,daoimpl classes">
+      <option name="closed" value="true" />
+      <created>1717191912205</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1717191912206</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +226,11 @@
     <MESSAGE value="docs: added discord.xml to .gitignore" />
     <MESSAGE value="feat: added teacher object and changed student id format" />
     <MESSAGE value="feat: added appropriated arraylists to student and teacher" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: added appropriated arraylists to student and teacher" />
+    <MESSAGE value="feat: added Teacher main,service,dao,daoimpl classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added Teacher main,service,dao,daoimpl classes" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
