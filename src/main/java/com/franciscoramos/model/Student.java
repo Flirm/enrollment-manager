@@ -9,8 +9,7 @@ public class Student
     private int id;
     private String name;
     private String email;
-    private LinkedHashMap<Discipline, Integer> completedDisciplines;
-    private ArrayList<Classroom> classrooms;
+    private ArrayList<Registry> registeredClasses;
 
     public Student(String name, String email)
     {
@@ -33,7 +32,5 @@ public class Student
     public String getEmail() {return email;}
     public void setEmail(String email) {this.email = email;}
 
-    public LinkedHashMap<Discipline, Integer> getCompletedDisciplines() {return completedDisciplines;}
-
-    public ArrayList<Classroom> getClassrooms() {return classrooms;}
+    public ArrayList<Registry> getRegisteredClasses() {return registeredClasses;}
 }

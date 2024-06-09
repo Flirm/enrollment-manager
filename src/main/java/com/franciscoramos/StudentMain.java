@@ -2,7 +2,7 @@ package com.franciscoramos;
 
 import com.franciscoramos.exception.EntityNotFoundException;
 import com.franciscoramos.exception.StudentEnrolledException;
-import com.franciscoramos.model.Discipline;
+import com.franciscoramos.model.Registry;
 import com.franciscoramos.model.Student;
 import com.franciscoramos.service.StudentService;
 import corejava.Console;
@@ -31,8 +31,9 @@ public class StudentMain
             System.out.println("5. Trancar disciplina \n");
             System.out.println("6. Listar todos os Alunos\n");
             System.out.println("7. Histórico do Aluno\n");
-            System.out.println("8. Voltar\n");
-            int result = Console.readInt("Digite um número entre 1 e 8: ");
+            System.out.println("8. Listar disciplinas sendo cursadas\n");
+            System.out.println("9. Voltar\n");
+            int result = Console.readInt("Digite um número entre 1 e 9: ");
 
             switch(result)
             {
@@ -79,15 +80,32 @@ public class StudentMain
                     {
                         student = studentService.read(id);
                         System.out.println("Histórico do aluno: " + student.getId() + "\n");
-                        for(Discipline discipline : student.getCompletedDisciplines().keySet()) {
-                            System.out.println("Nome: " + discipline + "\n");
-                            System.out.println("Nota: " + student.getCompletedDisciplines().get(discipline) + "\n");
+                        for(Registry registry : student.getRegisteredClasses()) {
+                            if(registry.getGrade() != -1)
+                            {
+                                System.out.println("Nome: " + registry.getClassroom().getName() + "\n");
+                                System.out.println("Nota: " + registry.getGrade() + "\n");
+                            }
                         }
                     }catch(EntityNotFoundException e){
                         System.out.println(e.getMessage() + "\n");
                     }
                 }
-                case 8 -> loop = false;
+                case 8 -> { //Listar disciplinas sendo cursadas
+                    int id = Console.readInt("Informe a matricula do aluno: ");
+                    try
+                    {
+                        student = studentService.read(id);
+                        System.out.println("Disciplinas sendo cursadas do aluno: " + student.getId() + "\n");
+                        for(Registry registry : student.getRegisteredClasses()) {
+                            if(registry.getGrade() == -1)
+                                System.out.println("Nome: " + registry.getClassroom().getName() + "\n");
+                        }
+                    }catch(EntityNotFoundException e){
+                        System.out.println(e.getMessage() + "\n");
+                    }
+                }
+                case 9 -> loop = false;
                 default -> System.out.println("Opção Inválida\n");
             }
         }

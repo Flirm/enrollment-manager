@@ -25,7 +25,7 @@ public class StudentService
         if(student == null)
             throw new EntityNotFoundException("Aluno inexistente.\n");
 
-        if(student.getClassrooms().isEmpty())
+        if(student.getRegisteredClasses().isEmpty())
             studentDao.remove(id);
         else
             throw new StudentEnrolledException("Este aluno esta matriculado em disciplinas e nao pode ser removido");
