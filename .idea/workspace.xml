@@ -4,27 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e95799f3-2b9f-465e-85a8-cae113e1e6da" name="Changes" comment="feat: added Teacher main,service,dao,daoimpl classes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/exception/EntityNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/exception/StudentEnrolledException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Teacher.java" afterDir="false" />
+    <list default="true" id="e95799f3-2b9f-465e-85a8-cae113e1e6da" name="Changes" comment="feat: begin student treatment">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Registry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/StudentMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/StudentMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/ClassroomDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/ClassroomDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/DisciplineDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/DisciplineDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/GenericDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/GenericDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/StudentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/TeacherDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/TeacherDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/ClassroomDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/ClassroomDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/DisciplineDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/DisciplineDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/StudentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/StudentDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/TeacherDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/TeacherDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Classroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Classroom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Theacher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/util/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/util/DaoFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,26 +52,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Pichau/.m2/repository/org/reflections/0.10.2/reflections-0.10.2.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Pichau/Desktop/Tudo/UFF/POO/introducao-20-Arquivos-completo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -111,7 +95,8 @@
       <workItem from="1716484980496" duration="30000" />
       <workItem from="1716485022629" duration="6539000" />
       <workItem from="1717191386478" duration="535000" />
-      <workItem from="1717861349149" duration="10700000" />
+      <workItem from="1717861349149" duration="11163000" />
+      <workItem from="1717962912915" duration="1686000" />
     </task>
     <task id="LOCAL-00001" summary="add basic-options-ui">
       <option name="closed" value="true" />
@@ -209,7 +194,63 @@
       <option name="project" value="LOCAL" />
       <updated>1717191912206</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="refactor: teacher name typo">
+      <option name="closed" value="true" />
+      <created>1717880997877</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1717880997877</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat: extending genericDao to other dao interfaces">
+      <option name="closed" value="true" />
+      <created>1717881087449</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1717881087449</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fix: fixed typos and dependencies so that factory works">
+      <option name="closed" value="true" />
+      <created>1717881139080</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1717881139080</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feat: create custom exceptions">
+      <option name="closed" value="true" />
+      <created>1717881165396</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1717881165396</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat: begin dao implementation">
+      <option name="closed" value="true" />
+      <created>1717881192513</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1717881192513</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat: create basic functionality of student service">
+      <option name="closed" value="true" />
+      <created>1717881273453</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1717881273453</updated>
+    </task>
+    <task id="LOCAL-00019" summary="feat: begin student treatment">
+      <option name="closed" value="true" />
+      <created>1717881336209</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1717881336209</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,7 +268,14 @@
     <MESSAGE value="feat: added teacher object and changed student id format" />
     <MESSAGE value="feat: added appropriated arraylists to student and teacher" />
     <MESSAGE value="feat: added Teacher main,service,dao,daoimpl classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: added Teacher main,service,dao,daoimpl classes" />
+    <MESSAGE value="refactor: teacher name typo" />
+    <MESSAGE value="feat: extending genericDao to other dao interfaces" />
+    <MESSAGE value="fix: fixed typos and dependencies so that factory works" />
+    <MESSAGE value="feat: create custom exceptions" />
+    <MESSAGE value="feat: begin dao implementation" />
+    <MESSAGE value="feat: create basic functionality of student service" />
+    <MESSAGE value="feat: begin student treatment" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: begin student treatment" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
