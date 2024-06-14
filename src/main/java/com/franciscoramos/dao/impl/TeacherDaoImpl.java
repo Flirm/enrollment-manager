@@ -12,19 +12,19 @@ public class TeacherDaoImpl implements TeacherDao
     private final LinkedHashMap<Integer, Teacher> teacherMap = new LinkedHashMap<>(16);
 
     public Teacher create(Integer key, Teacher value) {
-        return null;
+        return teacherMap.put(key, value);
     }
 
     public Teacher update(Integer key, Teacher value) {
-        return null;
+        return teacherMap.put(key, value);
     }
 
     public Teacher remove(Integer key) {
-        return null;
+        return teacherMap.remove(key);
     }
 
     public Teacher read(Integer key) {
-        return null;
+        return teacherMap.get(key);
     }
 
     public List<Teacher> readAll() {
