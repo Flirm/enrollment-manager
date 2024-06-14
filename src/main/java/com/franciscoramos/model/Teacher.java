@@ -12,7 +12,7 @@ public class Teacher
 
     public Teacher(String name, String email)
     {
-        this.id = Integer.parseInt("1" + count++);
+        this.id = count++;
         this.name = name;
         this.email = email;
     }
@@ -30,4 +30,6 @@ public class Teacher
 
     public String getEmail() {return email;}
     public void setEmail(String email) {this.email = email;}
+
+    public ArrayList<Classroom> getClassrooms() {return classrooms;}
 }

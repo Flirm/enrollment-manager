@@ -1,7 +1,12 @@
 package com.franciscoramos;
 
+import com.franciscoramos.exception.EntityNotFoundException;
+import com.franciscoramos.exception.TeacherWithClassroomsException;
+import com.franciscoramos.model.Teacher;
 import com.franciscoramos.service.TeacherService;
 import corejava.Console;
+
+import java.util.List;
 
 public class TeacherMain
 {
@@ -9,6 +14,10 @@ public class TeacherMain
 
     public void run()
     {
+        String name;
+        String email;
+        Teacher teacher;
+
         boolean loop = true;
         while(loop)
         {
@@ -24,11 +33,25 @@ public class TeacherMain
 
             switch(result)
             {
-                case 1 ->{
-                    System.out.println("Cadastrando\n");
+                case 1 ->{ //cadastrar
+                    name = Console.readLine("Informe o nome do professor: ");
+                    String[] names = name.split(" ");
+                    email = Character.toLowerCase(name.charAt(0)) + names[names.length - 1].toLowerCase() + "@id.prof.uff.br";
+                    teacher = new Teacher(name, email);
+                    teacherService.create(teacher);
+                    System.out.println("\nProfessor " + name + " cadastrado com sucesso!");
+                    System.out.println("Numero de inscrição: " + teacher.getId());
+                    System.out.println("Email: " + email + "\n");
                 }
-                case 2 ->{
-                    System.out.println("Descadastrando\n");
+                case 2 ->{ //descadastrar
+                    int id = Console.readInt("Informe o numero de inscrição do professor: ");
+                    try
+                    {
+                        teacherService.remove(id);
+                        System.out.println("Professor " + id + " removido com sucesso!\n");
+                    }catch(EntityNotFoundException | TeacherWithClassroomsException e){
+                        System.out.println(e.getMessage() + "\n");
+                    }
                 }
                 case 3 ->{
                     System.out.println("Alterando Professor\n");
@@ -36,8 +59,11 @@ public class TeacherMain
                 case 4 ->{
                     System.out.println("Alocando Professor em Turma\n");
                 }
-                case 5 ->{
-                    System.out.println("Listando Professores\n");
+                case 5 ->{ //listando profs
+                    List<Teacher> teachers = teacherService.readAll();
+                    System.out.println("Professores cadastrados no sistema:\n");
+                    for(Teacher t : teachers)
+                        System.out.println(t);
                 }
                 case 6 -> loop = false;
                 default -> System.out.println("Opção Inválida\n");
