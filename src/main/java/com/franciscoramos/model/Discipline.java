@@ -8,13 +8,14 @@ public class Discipline
     private int id;
     private int workLoad;
     private String name;
-    private ArrayList<Classroom> classrooms;
+    private final ArrayList<Classroom> classrooms;
 
     public Discipline(String name, int workLoad)
     {
         this.id = count++;
         this.workLoad = workLoad;
         this.name = name;
+        this.classrooms = new ArrayList<>();
     }
 
     public String toString()

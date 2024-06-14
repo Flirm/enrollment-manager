@@ -5,6 +5,7 @@ public class Registry
 {
     private int grade;
     private String date;
+    private String schoolTerm;
     private Student student;
     private Classroom classroom;
 
@@ -14,6 +15,7 @@ public class Registry
         this.classroom = classroom;
         this.date = java.time.LocalDate.now().toString();
         this.grade = -1;
+        this.schoolTerm = classroom.getSchoolTerm();
     }
 
     public int getGrade() {return this.grade;}
@@ -27,4 +29,7 @@ public class Registry
 
     public Classroom getClassroom() {return this.classroom;}
     public void setClassroom(Classroom classroom) {this.classroom = classroom;}
+
+    public String getSchoolTerm() {return this.schoolTerm;}
+    public void setSchoolTerm(String schoolTerm) {this.schoolTerm = schoolTerm;}
 }

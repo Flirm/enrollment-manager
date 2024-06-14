@@ -8,13 +8,14 @@ public class Teacher
     private int id;
     private String name;
     private String email;
-    private ArrayList<Classroom> classrooms;
+    private final ArrayList<Classroom> classrooms;
 
     public Teacher(String name, String email)
     {
         this.id = count++;
         this.name = name;
         this.email = email;
+        this.classrooms = new ArrayList<>();
     }
 
     public String toString()
