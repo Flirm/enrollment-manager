@@ -12,19 +12,19 @@ public class DisciplineDaoImpl implements DisciplineDao
     private final LinkedHashMap<Integer, Discipline> disciplinesMap = new LinkedHashMap<>(16);
 
     public Discipline create(Integer key, Discipline value) {
-        return null;
+        return disciplinesMap.put(key, value);
     }
 
     public Discipline update(Integer key, Discipline value) {
-        return null;
+        return disciplinesMap.put(key, value);
     }
 
     public Discipline remove(Integer key) {
-        return null;
+        return disciplinesMap.remove(key);
     }
 
     public Discipline read(Integer key) {
-        return null;
+        return disciplinesMap.get(key);
     }
 
     public List<Discipline> readAll() {

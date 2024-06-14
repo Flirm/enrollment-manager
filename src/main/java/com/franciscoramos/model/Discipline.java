@@ -1,11 +1,14 @@
 package com.franciscoramos.model;
 
+import java.util.ArrayList;
+
 public class Discipline
 {
     private static int count = 0;
     private int id;
     private int workLoad;
     private String name;
+    private ArrayList<Classroom> classrooms;
 
     public Discipline(String name, int workLoad)
     {
@@ -27,4 +30,6 @@ public class Discipline
 
     public String getName() {return this.name;}
     public void setName(String name) {this.name = name;}
+
+    public ArrayList<Classroom> getClassrooms() {return this.classrooms;}
 }
