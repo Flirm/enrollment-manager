@@ -9,19 +9,20 @@ public class Classroom
     private String schoolTerm;
     private Discipline discipline;
     private Teacher teacher;
-    private ArrayList<Registry> registeredStudents;
+    private final ArrayList<Registry> registeredStudents;
 
     public Classroom(Discipline discipline, String schoolTerm, Teacher teacher)
     {
-        this.id = Integer.parseInt(String.valueOf(count++) + String.valueOf(discipline.getId()) + schoolTerm);
+        this.id = count++;
         this.schoolTerm = schoolTerm;
         this.discipline = discipline;
         this.teacher = teacher;
+        this.registeredStudents = new ArrayList<>();
     }
 
     public String toString()
     {
-        return "Nome: " + this.discipline.getName() + "\nProfessor: "+ this.teacher + "\nPeríodo: " + this.schoolTerm + "\nId: " + this.id + "\n";
+        return "Nome: " + this.discipline.getName() + "\nProfessor: "+ this.teacher.getName() + "\nPeríodo: " + this.schoolTerm + "\nId: " + this.id + "\n";
     }
 
     public int getId() {return this.id;}
@@ -38,4 +39,6 @@ public class Classroom
 
     public Teacher getTeacher() {return this.teacher;}
     public void setTeacher(Teacher teacher) {this.teacher = teacher;}
+
+    public ArrayList<Registry> getRegisteredStudents() {return this.registeredStudents;}
 }

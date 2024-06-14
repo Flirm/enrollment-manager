@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e95799f3-2b9f-465e-85a8-cae113e1e6da" name="Changes" comment="feat: created discipline treatment">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/exception/TeacherWithClassroomsException.java" afterDir="false" />
+    <list default="true" id="e95799f3-2b9f-465e-85a8-cae113e1e6da" name="Changes" comment="feat: started creation of teacher treatment">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/exception/ClassroomNotEmptyException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/StudentMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/StudentMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/TeacherMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/TeacherMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/TeacherDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/TeacherDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/ClassroomMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/ClassroomMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/ClassroomDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/ClassroomDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/ClassroomDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/ClassroomDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Classroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Classroom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Discipline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Discipline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Registry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Registry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/service/TeacherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/service/ClassroomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/service/ClassroomService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +104,7 @@
       <workItem from="1717191386478" duration="535000" />
       <workItem from="1717861349149" duration="11163000" />
       <workItem from="1717962912915" duration="3083000" />
-      <workItem from="1718380807713" duration="6659000" />
+      <workItem from="1718380807713" duration="12868000" />
     </task>
     <task id="LOCAL-00001" summary="add basic-options-ui">
       <option name="closed" value="true" />
@@ -296,7 +298,31 @@
       <option name="project" value="LOCAL" />
       <updated>1718388050519</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="refactor: updated useless code in student classes and data formatting (id and email)">
+      <option name="closed" value="true" />
+      <created>1718388223434</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1718388223434</updated>
+    </task>
+    <task id="LOCAL-00026" summary="feat: implemented TeacherDaoImpl">
+      <option name="closed" value="true" />
+      <created>1718388252213</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1718388252213</updated>
+    </task>
+    <task id="LOCAL-00027" summary="feat: started creation of teacher treatment">
+      <option name="closed" value="true" />
+      <created>1718388305703</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1718388305703</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,7 +351,10 @@
     <MESSAGE value="refactor: refactor student classes to work with new registry class" />
     <MESSAGE value="refactor: isolating class attributes" />
     <MESSAGE value="feat: created discipline treatment" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: created discipline treatment" />
+    <MESSAGE value="refactor: updated useless code in student classes and data formatting (id and email)" />
+    <MESSAGE value="feat: implemented TeacherDaoImpl" />
+    <MESSAGE value="feat: started creation of teacher treatment" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: started creation of teacher treatment" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
