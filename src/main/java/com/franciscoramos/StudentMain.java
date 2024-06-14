@@ -39,11 +39,12 @@ public class StudentMain
             {
                 case 1 ->{ //matricular
                     name = Console.readLine("Informe o nome do aluno: ");
-                    email = name.charAt(0) + name.split(" ")[1].toLowerCase() + "@id.uff.br";
+                    String[] names = name.split(" ");
+                    email = Character.toLowerCase(name.charAt(0)) + names[names.length - 1].toLowerCase() + "@id.uff.br";
                     student = new Student(name, email);
                     studentService.create(student);
-                    System.out.println("Aluno " + name + " matriculado com sucesso!\n");
-                    System.out.println("Numero de Matricula: " + student.getId() + "\n");
+                    System.out.println("\nAluno " + name + " matriculado com sucesso!");
+                    System.out.println("Numero de Matricula: " + student.getId());
                     System.out.println("Email: " + email + "\n");
                 }
                 case 2 ->{ //desmatricular
@@ -60,7 +61,7 @@ public class StudentMain
                     System.out.println("Alterando Aluno\n");
                 }
                 case 4 ->{ //inscrever em disciplina
-                    System.out.println("Inscrevendo Aluno\n");
+                    int id = Console.readInt("Informe o id do aluno: ");
                 }
                 case 5 ->{ //trancar disciplina
                     System.out.println("Trancando disciplina\n");

@@ -1,7 +1,6 @@
 package com.franciscoramos.model;
 
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 
 public class Student
 {
@@ -13,7 +12,7 @@ public class Student
 
     public Student(String name, String email)
     {
-        this.id = Integer.parseInt("0" + count++);
+        this.id = count++;
         this.name = name;
         this.email = email;
     }

@@ -14,8 +14,7 @@ public class StudentService
 
     public Student create(Student student)
     {
-        studentDao.create(student.getId(), student);
-        return student;
+        return studentDao.create(student.getId(), student);
     }
 
     public Student remove(int id)
@@ -25,7 +24,7 @@ public class StudentService
         if(student == null)
             throw new EntityNotFoundException("Aluno inexistente.\n");
 
-        if(student.getRegisteredClasses().isEmpty())
+        if(student.getRegisteredClasses() == null || student.getRegisteredClasses().isEmpty())
             studentDao.remove(id);
         else
             throw new StudentEnrolledException("Este aluno esta matriculado em disciplinas e nao pode ser removido");
@@ -43,7 +42,6 @@ public class StudentService
 
     public List<Student> readAll()
     {
-        List<Student> students = studentDao.readAll();
-        return students;
+        return studentDao.readAll();
     }
 }
