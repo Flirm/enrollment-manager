@@ -8,15 +8,29 @@ public class Registry
     private String schoolTerm;
     private Student student;
     private Classroom classroom;
+    private int id;
+    private static int count = 0;
 
     public Registry(Student student, Classroom classroom)
     {
+        this.id = count++;
         this.student = student;
         this.classroom = classroom;
         this.date = java.time.LocalDate.now().toString();
         this.grade = -1;
         this.schoolTerm = classroom.getSchoolTerm();
     }
+
+    public String toString() {
+        String s = "Numero de Inscricao: " + this.id + "\nDisciplina: " + this.classroom.getName() + "\nData da Inscricao: " + this.date
+                + "\nPeríodo: " + this.schoolTerm + "\n";
+        if(this.grade != -1)
+            s += "Nota: " + this.grade + "\n";
+        return s;
+    }
+
+    public int getId() {return this.id;}
+    public void setId(int id) {this.id = id;}
 
     public int getGrade() {return this.grade;}
     public void setGrade(int grade) {this.grade = grade;}
