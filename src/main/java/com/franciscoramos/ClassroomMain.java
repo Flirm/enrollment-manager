@@ -1,6 +1,8 @@
 package com.franciscoramos;
 
 import com.franciscoramos.exception.ClassroomNotEmptyException;
+import com.franciscoramos.exception.DisciplineAlreadyCompleteException;
+import com.franciscoramos.exception.DisciplineWithClassroomsException;
 import com.franciscoramos.exception.EntityNotFoundException;
 import com.franciscoramos.model.Classroom;
 import com.franciscoramos.model.Discipline;
@@ -8,9 +10,11 @@ import com.franciscoramos.model.Registry;
 import com.franciscoramos.model.Teacher;
 import com.franciscoramos.service.ClassroomService;
 import com.franciscoramos.service.DisciplineService;
+import com.franciscoramos.service.RegistryService;
 import com.franciscoramos.service.TeacherService;
 import corejava.Console;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ClassroomMain
@@ -18,6 +22,7 @@ public class ClassroomMain
     private final ClassroomService classroomService = new ClassroomService();
     private final DisciplineService disciplineService = new DisciplineService();
     private final TeacherService teacherService = new TeacherService();
+    private final RegistryService registryService = new RegistryService();
 
     public void run()
     {
@@ -49,6 +54,8 @@ public class ClassroomMain
                         Teacher teacher = teacherService.read(teacherId);
                         classroom = new Classroom(discipline, schoolTerm, teacher);
                         classroomService.create(classroom);
+                        teacher.getClassrooms().add(classroom);
+                        discipline.getClassrooms().add(classroom);
                         System.out.println("Turma de numero " + classroom.getId() + " da disciplina " + discipline.getName()
                                 + " no periodo " + schoolTerm + " criada com sucesso!\n");
                     }catch(EntityNotFoundException e)
@@ -65,6 +72,30 @@ public class ClassroomMain
                     }catch(EntityNotFoundException | ClassroomNotEmptyException e)
                     {
                         System.out.println(e.getMessage() + "\n");
+                        int r = Console.readInt("Deseja remover todos os alunos e professor associado? (1.Sim Outro.Nao): ");
+                        if(r == 1)
+                        {
+                            try
+                            {
+                                classroom = classroomService.read(id);
+                                Teacher teacher = classroom.getTeacher();
+                                teacher.getClassrooms().remove(classroom);
+                                classroom.setTeacher(null);
+                                ArrayList<Registry> registeredStudents = classroom.getRegisteredStudents();
+                                for(Registry registry : registeredStudents)
+                                {
+                                    registryService.remove(registry.getId());
+                                    registry.getStudent().getRegisteredClasses().remove(registry.getId());
+                                }
+                                classroom.getRegisteredStudents().removeAll(registeredStudents);
+                                classroomService.remove(id);
+                                System.out.println("Turma " + id + " removida com sucesso!\n");
+                            }catch(EntityNotFoundException | DisciplineAlreadyCompleteException e1)
+                            {
+                                System.out.println(e1.getMessage() + "\n");
+                            }
+
+                        }
                     }
                 }
                 case 3 ->{ // listar
@@ -99,7 +130,7 @@ public class ClassroomMain
                         System.out.println("Alunos Inscritos:\n");
                         List<Registry> registries = classroomService.readAllStudents(id);
                         for(Registry r : registries)
-                            System.out.println(r);
+                            System.out.println(r.getStudent().getName());
                     }catch(EntityNotFoundException e) {
                         System.out.println(e.getMessage() + "\n");
                     }
