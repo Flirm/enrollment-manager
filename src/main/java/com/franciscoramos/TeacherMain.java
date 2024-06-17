@@ -2,7 +2,9 @@ package com.franciscoramos;
 
 import com.franciscoramos.exception.EntityNotFoundException;
 import com.franciscoramos.exception.TeacherWithClassroomsException;
+import com.franciscoramos.model.Classroom;
 import com.franciscoramos.model.Teacher;
+import com.franciscoramos.service.ClassroomService;
 import com.franciscoramos.service.TeacherService;
 import corejava.Console;
 
@@ -11,6 +13,7 @@ import java.util.List;
 public class TeacherMain
 {
     public static final TeacherService teacherService = new TeacherService();
+    public static final ClassroomService classroomService = new ClassroomService();
 
     public void run()
     {
@@ -25,8 +28,8 @@ public class TeacherMain
             System.out.println("O que deseja fazer?\n");
             System.out.println("1. Cadastrar Professor na instituíção\n");
             System.out.println("2. Descadastrar Professor da instituíção\n");
-            System.out.println("3. Alterar Professor\n");
-            System.out.println("4. Alocar Professor em Turma\n");
+            System.out.println("3. Alocar professor em uma Turma\n");
+            System.out.println("4. Listar turmas de um Professor\n");
             System.out.println("5. Listar todos os Professores\n");
             System.out.println("6. Voltar\n");
             int result = Console.readInt("Digite um número entre 1 e 6: ");
@@ -53,11 +56,34 @@ public class TeacherMain
                         System.out.println(e.getMessage() + "\n");
                     }
                 }
-                case 3 ->{
-                    System.out.println("Alterando Professor\n");
+                case 3 ->{ //Alocar professor em uma Turma
+                    int id = Console.readInt("Informe o ID do professor: ");
+                    try
+                    {
+                        teacher = teacherService.read(id);
+                        id = Console.readInt("Informe o ID da turma: ");
+                        Classroom classroom = classroomService.read(id);
+                        classroom.getTeacher().getClassrooms().remove(classroom);
+                        classroom.setTeacher(teacher);
+                        teacher.getClassrooms().add(classroom);
+                        System.out.println("Professor " + teacher.getName() + " alocado na turma " + classroom.getName() + " com sucesso!\n");
+                    }catch(EntityNotFoundException e){
+                        System.out.println(e.getMessage() + "\n");
+                    }
                 }
-                case 4 ->{
-                    System.out.println("Alocando Professor em Turma\n");
+                case 4 ->{ // listando turmas de um professor
+                    int id = Console.readInt("Informe o ID do professor: ");
+                    try
+                    {
+                        teacher = teacherService.read(id);
+                        System.out.println("Turmas lecionadas por " + teacher.getName() + ":\n");
+                        for(Classroom c : teacher.getClassrooms())
+                        {
+                            System.out.println(c);
+                        }
+                    }catch(EntityNotFoundException e){
+                        System.out.println(e.getMessage() + "\n");
+                    }
                 }
                 case 5 ->{ //listando profs
                     List<Teacher> teachers = teacherService.readAll();
