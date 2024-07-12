@@ -9,6 +9,7 @@ public class Discipline
     private int workLoad;
     private String name;
     private final ArrayList<Classroom> classrooms;
+    private final ArrayList<Discipline> preRequisites;
 
     public Discipline(String name, int workLoad)
     {
@@ -16,6 +17,7 @@ public class Discipline
         this.workLoad = workLoad;
         this.name = name;
         this.classrooms = new ArrayList<>();
+        this.preRequisites = new ArrayList<>();
     }
 
     public String toString()
@@ -33,4 +35,6 @@ public class Discipline
     public void setName(String name) {this.name = name;}
 
     public ArrayList<Classroom> getClassrooms() {return this.classrooms;}
+
+    public ArrayList<Discipline> getPreRequisites() {return this.preRequisites;}
 }
