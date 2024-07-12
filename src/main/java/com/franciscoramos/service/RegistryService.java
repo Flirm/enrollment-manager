@@ -1,22 +1,26 @@
 package com.franciscoramos.service;
 
 import com.franciscoramos.dao.RegistryDao;
-import com.franciscoramos.exception.DisciplineAlreadyCompleteException;
-import com.franciscoramos.exception.EntityNotFoundException;
-import com.franciscoramos.exception.InvalidGradeException;
+import com.franciscoramos.exception.*;
+import com.franciscoramos.model.Classroom;
 import com.franciscoramos.model.Registry;
 import com.franciscoramos.util.DaoFactory;
 
 import java.util.List;
+import java.util.Objects;
 
 
 public class RegistryService
 {
     private final RegistryDao registryDao = DaoFactory.getDao(RegistryDao.class);
 
-    public Registry create(Registry registry)
+    public Registry create(Registry registry, List<Classroom> classrooms)
     {
-        return registryDao.create(registry.getId(), registry);
+        if(!classrooms.contains(registry.getClassroom())){
+            throw new InvalidClassroomEnrollException("Incrição não pode ser realizada pois a turma não atende aos parâmetros inseridos.\n");
+        }
+        registryDao.create(registry.getId(), registry);
+        return registry;
     }
 
     public Registry remove(int id)
