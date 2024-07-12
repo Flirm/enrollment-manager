@@ -11,14 +11,14 @@ public class Registry
     private int id;
     private static int count = 0;
 
-    public Registry(Student student, Classroom classroom)
+    public Registry(Student student, Classroom classroom, String schoolTerm)
     {
         this.id = count++;
         this.student = student;
         this.classroom = classroom;
         this.date = java.time.LocalDate.now().toString();
         this.grade = -1;
-        this.schoolTerm = classroom.getSchoolTerm();
+        this.schoolTerm = schoolTerm;
     }
 
     public String toString() {
