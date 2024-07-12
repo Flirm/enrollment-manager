@@ -36,6 +36,18 @@ public class DisciplineMain
                     name = Console.readLine("Informe o nome da disciplina: ");
                     int workLoad = Console.readInt("Informe a carga horária: ");
                     discipline = new Discipline(name, workLoad);
+                    int haveRequisite = Console.readInt("A disciplina tem Pré-Requisitos? (1.Sim 0.Não): ");
+                    if(haveRequisite == 1){
+                        Discipline requisite;
+                        while(haveRequisite != -1){
+                            haveRequisite = Console.readInt("Informe o ID da disciplina que é Pré-Requisito (-1 para sair): ");
+                            try {
+                                requisite = disciplineService.read(haveRequisite);
+                                discipline.getPreRequisites().add(requisite);
+                            }
+                            catch(EntityNotFoundException e) {System.out.println(e.getMessage() + "\n");}
+                        }
+                    }
                     disciplineService.create(discipline);
                     System.out.println("Disciplina " + name + " de " + workLoad + " horas com ID " + discipline.getId() + " criada com sucesso\n");
                 }
