@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e95799f3-2b9f-465e-85a8-cae113e1e6da" name="Changes" comment="feat: started classroom treatment">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/RegistryDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/RegistryDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/exception/DisciplineAlreadyCompleteException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/exception/InvalidGradeException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/service/RegistryService.java" afterDir="false" />
+    <list default="true" id="e95799f3-2b9f-465e-85a8-cae113e1e6da" name="Changes" comment="feat: finishing treatments and making new relations to registry new classes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/exception/InvalidClassroomEnrollException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/ClassroomMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/ClassroomMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/DisciplineMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/DisciplineMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/StudentMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/StudentMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/TeacherMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/TeacherMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Discipline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Discipline.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Registry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Registry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/service/RegistryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/service/RegistryService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,26 +55,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Pichau/Desktop/Tudo/UFF/POO/introducao-20-Arquivos-completo",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Pichau/Desktop/Tudo/UFF/POO/introducao-20-Arquivos-completo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -107,7 +102,8 @@
       <workItem from="1717962912915" duration="3083000" />
       <workItem from="1718380807713" duration="12868000" />
       <workItem from="1718403577376" duration="212000" />
-      <workItem from="1718644951387" duration="10522000" />
+      <workItem from="1718644951387" duration="10880000" />
+      <workItem from="1720803556204" duration="6116000" />
     </task>
     <task id="LOCAL-00001" summary="add basic-options-ui">
       <option name="closed" value="true" />
@@ -341,17 +337,45 @@
       <option name="project" value="LOCAL" />
       <updated>1718403781757</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="feat: added classes to handle registry treatment">
+      <option name="closed" value="true" />
+      <created>1718655774105</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1718655774105</updated>
+    </task>
+    <task id="LOCAL-00031" summary="feat: added needed exceptions">
+      <option name="closed" value="true" />
+      <created>1718655803699</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1718655803699</updated>
+    </task>
+    <task id="LOCAL-00032" summary="feat: listing and changing teacher functions">
+      <option name="closed" value="true" />
+      <created>1718655862215</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1718655862215</updated>
+    </task>
+    <task id="LOCAL-00033" summary="feat: finishing treatments and making new relations to registry new classes">
+      <option name="closed" value="true" />
+      <created>1718655970977</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1718655970977</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: added model classes" />
-    <MESSAGE value="feat: added dao factory" />
-    <MESSAGE value="feat: added base dao classes and interfaces" />
-    <MESSAGE value="feat: added base service classes" />
     <MESSAGE value="feat: added service to main classes" />
     <MESSAGE value="docs: added discord.xml to .gitignore" />
     <MESSAGE value="feat: added teacher object and changed student id format" />
@@ -373,7 +397,11 @@
     <MESSAGE value="feat: started creation of teacher treatment" />
     <MESSAGE value="refactor: making arraylist instance variables final (might get changed later)" />
     <MESSAGE value="feat: started classroom treatment" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: started classroom treatment" />
+    <MESSAGE value="feat: added classes to handle registry treatment" />
+    <MESSAGE value="feat: added needed exceptions" />
+    <MESSAGE value="feat: listing and changing teacher functions" />
+    <MESSAGE value="feat: finishing treatments and making new relations to registry new classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: finishing treatments and making new relations to registry new classes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
