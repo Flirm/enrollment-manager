@@ -1,8 +1,6 @@
 package com.franciscoramos;
 
-import com.franciscoramos.exception.DisciplineAlreadyCompleteException;
-import com.franciscoramos.exception.EntityNotFoundException;
-import com.franciscoramos.exception.StudentEnrolledException;
+import com.franciscoramos.exception.*;
 import com.franciscoramos.model.Classroom;
 import com.franciscoramos.model.Registry;
 import com.franciscoramos.model.Student;
@@ -14,6 +12,7 @@ import corejava.Console;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class StudentMain
 {
@@ -75,21 +74,21 @@ public class StudentMain
                     try
                     {
                         student = studentService.read(id);
+                        String schoolTerm = Console.readLine("Informe o período da inscrição: ");
                         id = Console.readInt("Informe o ID da disciplina: ");
-                        ArrayList<Classroom> classrooms = disciplineService.read(id).getClassrooms();
+                        List<Classroom> classrooms = disciplineService.read(id).getClassrooms().stream().filter((room) -> Objects.equals(room.getSchoolTerm(), schoolTerm)).toList();
                         System.out.println("Turmas Disponiveis: \n");
                         for(Classroom classroom : classrooms)
                             System.out.println(classroom);
                         id = Console.readInt("Informe o ID da turma que deseja: ");
                         Classroom classroom = classroomService.read(id);
-                        Registry registry = new Registry(student, classroom);
-                        registryService.create(registry);
+                        Registry registry = new Registry(student, classroom, schoolTerm);
+                        registryService.create(registry, classrooms);
                         student.getRegisteredClasses().put(registry.getId(), registry);
                         classroom.getRegisteredStudents().add(registry);
                         System.out.println("Aluno " + id + " inscrito na turma de " + classroom.getName() + " com sucesso!\n");
                         System.out.println("Numero de inscricao: " + registry.getId());
-                    }catch(EntityNotFoundException e)
-                    {
+                    }catch(EntityNotFoundException | InvalidClassroomEnrollException e) {
                         System.out.println(e.getMessage() + "\n");
                     }
                 }
