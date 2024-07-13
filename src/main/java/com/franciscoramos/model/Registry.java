@@ -10,6 +10,7 @@ public class Registry
     private Classroom classroom;
     private int id;
     private static int count = 0;
+    private boolean enoughPresence;
 
     public Registry(Student student, Classroom classroom, String schoolTerm)
     {
@@ -19,13 +20,14 @@ public class Registry
         this.date = java.time.LocalDate.now().toString();
         this.grade = -1;
         this.schoolTerm = schoolTerm;
+        this.enoughPresence = true;
     }
 
     public String toString() {
         String s = "Numero de Inscricao: " + this.id + "\nDisciplina: " + this.classroom.getName() + "\nData da Inscricao: " + this.date
                 + "\nPeríodo: " + this.schoolTerm + "\n";
         if(this.grade != -1)
-            s += "Nota: " + this.grade + "\n";
+            s += "Nota: " + this.grade + "\n" + "Presença: " + (this.enoughPresence ? "Suficiente" : "Insuficiente" + "\n");
         return s;
     }
 
@@ -46,4 +48,7 @@ public class Registry
 
     public String getSchoolTerm() {return this.schoolTerm;}
     public void setSchoolTerm(String schoolTerm) {this.schoolTerm = schoolTerm;}
+
+    public boolean getEnoughPresence() {return this.enoughPresence;}
+    public void setEnoughPresence(boolean enoughPresence) {this.enoughPresence = enoughPresence;}
 }
