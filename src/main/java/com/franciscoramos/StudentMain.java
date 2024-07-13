@@ -74,18 +74,24 @@ public class StudentMain
                     try
                     {
                         student = studentService.read(id);
+
                         String schoolTerm = Console.readLine("Informe o período da inscrição: ");
                         id = Console.readInt("Informe o ID da disciplina: ");
+
                         List<Classroom> classrooms = disciplineService.read(id).getClassrooms().stream().filter((room) -> Objects.equals(room.getSchoolTerm(), schoolTerm)).toList();
+
                         System.out.println("Turmas Disponiveis: \n");
                         for(Classroom classroom : classrooms)
                             System.out.println(classroom);
                         id = Console.readInt("Informe o ID da turma que deseja: ");
                         Classroom classroom = classroomService.read(id);
+
                         Registry registry = new Registry(student, classroom, schoolTerm);
                         registryService.create(registry, classrooms);
+
                         student.getRegisteredClasses().put(registry.getId(), registry);
                         classroom.getRegisteredStudents().add(registry);
+
                         System.out.println("Aluno " + id + " inscrito na turma de " + classroom.getName() + " com sucesso!\n");
                         System.out.println("Numero de inscricao: " + registry.getId());
                     }catch(EntityNotFoundException | InvalidClassroomEnrollException e) {
