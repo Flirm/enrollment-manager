@@ -92,7 +92,7 @@ public class StudentMain
                         student.getRegisteredClasses().put(registry.getId(), registry);
                         classroom.getRegisteredStudents().add(registry);
 
-                        System.out.println("Aluno " + id + " inscrito na turma de " + classroom.getName() + " com sucesso!\n");
+                        System.out.println("Aluno " + student.getName() + " inscrito na turma de " + classroom.getName() + " com sucesso!\n");
                         System.out.println("Numero de inscricao: " + registry.getId());
                     }catch(EntityNotFoundException | InvalidClassroomEnrollException e) {
                         System.out.println(e.getMessage() + "\n");
@@ -122,7 +122,7 @@ public class StudentMain
                     System.out.println("Alunos matriculados no sistema:\n");
                     for(Student studentInList : students)
                     {
-                        System.out.println(studentInList);
+                        System.out.println(studentInList + "\n");
                     }
 
                 }
@@ -133,7 +133,7 @@ public class StudentMain
                         student = studentService.read(id);
                         System.out.println("Histórico do aluno: " + student.getId() + "\n");
                         for(Registry registry : student.getRegisteredClasses().values().stream().filter((reg) -> reg.getGrade() != -1).toList()) {
-                                System.out.println(registry);
+                                System.out.println(registry + "\n");
                         }
                     }catch(EntityNotFoundException e){
                         System.out.println(e.getMessage() + "\n");
@@ -146,7 +146,7 @@ public class StudentMain
                         student = studentService.read(id);
                         System.out.println("Disciplinas sendo cursadas do aluno: " + student.getId() + "\n");
                         for(Registry registry : student.getRegisteredClasses().values().stream().filter((reg) -> reg.getGrade() == -1).toList()) {
-                            System.out.println(registry);
+                            System.out.println(registry + "\n");
                         }
                     }catch(EntityNotFoundException e){
                         System.out.println(e.getMessage() + "\n");
@@ -157,14 +157,15 @@ public class StudentMain
                     try
                     {
                         student = studentService.read(id);
-                        System.out.println("Inscricoes ainda sem nota atribuida: ");
-                        for(Registry registry : student.getRegisteredClasses().values().stream().filter((reg) -> reg.getGrade() == -1).toList()) {
-                            System.out.println(registry);
+                        System.out.println("Inscricoes: ");
+                        for(Registry registry : student.getRegisteredClasses().values().stream().toList()) {
+                            System.out.println(registry + "\n");
                         }
                         id = Console.readInt("Informe o ID da inscricao que deseja atribuir nota: ");
                         int newGrade = Console.readInt("Informe a nota do aluno: ");
-                        registryService.updateGrade(id, newGrade);
-                    }catch(EntityNotFoundException e){
+                        boolean presence = (0 != Console.readInt("Informe se a presença do aluno foi suficiente (1.Sim 0.Não): "));
+                        registryService.updateGrade(id, newGrade, presence);
+                    }catch(EntityNotFoundException | InvalidGradeException e){
                         System.out.println(e.getMessage() + "\n");
                     }
                 }
