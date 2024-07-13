@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e95799f3-2b9f-465e-85a8-cae113e1e6da" name="Changes" comment="refactor: spacing for better readability">
+    <list default="true" id="e95799f3-2b9f-465e-85a8-cae113e1e6da" name="Changes" comment="feat: handles pre-requisites when enrolling student in class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/ClassroomMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/ClassroomMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/DisciplineMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/DisciplineMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/StudentMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/StudentMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Classroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Classroom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Registry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Registry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/service/RegistryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/service/RegistryService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +105,8 @@
       <workItem from="1718644951387" duration="10880000" />
       <workItem from="1720803556204" duration="6116000" />
       <workItem from="1720816933774" duration="504000" />
-      <workItem from="1720842896510" duration="3018000" />
+      <workItem from="1720842896510" duration="3212000" />
+      <workItem from="1720897853707" duration="6198000" />
     </task>
     <task id="LOCAL-00001" summary="add basic-options-ui">
       <option name="closed" value="true" />
@@ -432,16 +436,37 @@
       <option name="project" value="LOCAL" />
       <updated>1720845911615</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="refactor: remove useless import">
+      <option name="closed" value="true" />
+      <created>1720846016979</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1720846016979</updated>
+    </task>
+    <task id="LOCAL-00043" summary="fix: now while loop works accordingly">
+      <option name="closed" value="true" />
+      <created>1720846059118</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1720846059118</updated>
+    </task>
+    <task id="LOCAL-00044" summary="feat: handles pre-requisites when enrolling student in class">
+      <option name="closed" value="true" />
+      <created>1720846130297</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1720846130297</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: create custom exceptions" />
-    <MESSAGE value="feat: begin dao implementation" />
-    <MESSAGE value="feat: create basic functionality of student service" />
     <MESSAGE value="feat: begin student treatment" />
     <MESSAGE value="feat: create registry class to hold info about individual enrollments" />
     <MESSAGE value="refactor: refactor student classes to work with new registry class" />
@@ -464,7 +489,10 @@
     <MESSAGE value="feat: when creating discipline now checks for pre-requisites" />
     <MESSAGE value="xml update" />
     <MESSAGE value="refactor: spacing for better readability" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: spacing for better readability" />
+    <MESSAGE value="refactor: remove useless import" />
+    <MESSAGE value="fix: now while loop works accordingly" />
+    <MESSAGE value="feat: handles pre-requisites when enrolling student in class" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: handles pre-requisites when enrolling student in class" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
