@@ -39,13 +39,14 @@ public class DisciplineMain
                     int haveRequisite = Console.readInt("A disciplina tem Pré-Requisitos? (1.Sim 0.Não): ");
                     if(haveRequisite == 1){
                         Discipline requisite;
+                        haveRequisite = Console.readInt("Informe o ID da disciplina que é Pré-Requisito (-1 para sair): ");
                         while(haveRequisite != -1){
-                            haveRequisite = Console.readInt("Informe o ID da disciplina que é Pré-Requisito (-1 para sair): ");
                             try {
                                 requisite = disciplineService.read(haveRequisite);
                                 discipline.getPreRequisites().add(requisite);
                             }
                             catch(EntityNotFoundException e) {System.out.println(e.getMessage() + "\n");}
+                            haveRequisite = Console.readInt("Informe o ID da disciplina que é Pré-Requisito (-1 para sair): ");
                         }
                     }
                     disciplineService.create(discipline);
