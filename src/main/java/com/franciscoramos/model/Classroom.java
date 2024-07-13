@@ -41,4 +41,8 @@ public class Classroom
     public void setTeacher(Teacher teacher) {this.teacher = teacher;}
 
     public ArrayList<Registry> getRegisteredStudents() {return this.registeredStudents;}
+
+    public int getStudentCount() {return this.registeredStudents.size();}
+
+    public int getApprovedStudentCount() {return this.registeredStudents.stream().filter(Registry::getEnoughPresence).filter((r) -> r.getGrade() >= 60).toList().size();}
 }
