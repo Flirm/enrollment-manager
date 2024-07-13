@@ -3,11 +3,12 @@ package com.franciscoramos.service;
 import com.franciscoramos.dao.RegistryDao;
 import com.franciscoramos.exception.*;
 import com.franciscoramos.model.Classroom;
+import com.franciscoramos.model.Discipline;
 import com.franciscoramos.model.Registry;
 import com.franciscoramos.util.DaoFactory;
 
+import java.util.HashSet;
 import java.util.List;
-import java.util.Objects;
 
 
 public class RegistryService
@@ -18,6 +19,18 @@ public class RegistryService
     {
         if(!classrooms.contains(registry.getClassroom())){
             throw new InvalidClassroomEnrollException("Incrição não pode ser realizada pois a turma não atende aos parâmetros inseridos.\n");
+        }
+        List<Discipline> preReqDisciplines = registry.getClassroom().getDiscipline().getPreRequisites();
+        List<Discipline> completedDisciplines = registry.getStudent().getRegisteredClasses().values().stream().filter((reg) -> reg.getGrade() != -1).map(Registry::getClassroom).map(Classroom::getDiscipline).toList();
+        for(Discipline discipline : preReqDisciplines){
+            System.out.println(discipline);
+        }
+        System.out.println("complete");
+        for(Discipline discipline : completedDisciplines){
+            System.out.println(discipline);
+        }
+        if(!new HashSet<>(completedDisciplines).containsAll(preReqDisciplines)){
+            throw new InvalidClassroomEnrollException("Incrição não pode ser realizada pois aluno não possuí todos os pré-requisitos.\n");
         }
         registryDao.create(registry.getId(), registry);
         return registry;
