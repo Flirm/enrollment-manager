@@ -21,7 +21,7 @@ public class RegistryService
             throw new InvalidClassroomEnrollException("Incrição não pode ser realizada pois a turma não atende aos parâmetros inseridos.\n");
         }
         List<Discipline> preReqDisciplines = registry.getClassroom().getDiscipline().getPreRequisites();
-        List<Discipline> completedDisciplines = registry.getStudent().getRegisteredClasses().values().stream().filter((reg) -> reg.getGrade() != -1).map(Registry::getClassroom).map(Classroom::getDiscipline).toList();
+        List<Discipline> completedDisciplines = registry.getStudent().getRegisteredClasses().values().stream().filter((reg) -> reg.getGrade() >= 60).filter(Registry::getEnoughPresence).map(Registry::getClassroom).map(Classroom::getDiscipline).toList();
         for(Discipline discipline : preReqDisciplines){
             System.out.println(discipline);
         }
@@ -45,11 +45,12 @@ public class RegistryService
         return registry;
     }
 
-    public Registry updateGrade(int id, int newGrade)
+    public Registry updateGrade(int id, int newGrade, boolean presence)
     {
         if(newGrade < 0 || newGrade > 100) throw new InvalidGradeException("Nota atribuida nao esta no intervalo valido [0, 100]\n");
         Registry registry = read(id);
         registry.setGrade(newGrade);
+        registry.setEnoughPresence(presence);
         return registryDao.update(id, registry);
     }
 
