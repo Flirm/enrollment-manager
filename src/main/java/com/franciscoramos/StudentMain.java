@@ -34,14 +34,13 @@ public class StudentMain
             System.out.println("O que deseja fazer?\n");
             System.out.println("1. Matricular Aluno na instituíção\n");
             System.out.println("2. Desmatricular Aluno da instituíção\n");
-            System.out.println("3. Alterar Aluno\n");
-            System.out.println("4. Inscrever Aluno em disciplina\n");
-            System.out.println("5. Trancar disciplina \n");
-            System.out.println("6. Listar todos os Alunos\n");
-            System.out.println("7. Histórico do Aluno\n");
-            System.out.println("8. Listar disciplinas sendo cursadas\n");
-            System.out.println("9. Atribuir Nota a Disciplina\n");
-            System.out.println("10. Voltar\n");
+            System.out.println("3. Inscrever Aluno em disciplina\n");
+            System.out.println("4. Trancar disciplina \n");
+            System.out.println("5. Listar todos os Alunos\n");
+            System.out.println("6. Histórico do Aluno\n");
+            System.out.println("7. Listar disciplinas sendo cursadas\n");
+            System.out.println("8. Atribuir Nota a Disciplina\n");
+            System.out.println("9. Voltar\n");
             int result = Console.readInt("Digite um número entre 1 e 9: ");
 
             switch(result)
@@ -66,10 +65,7 @@ public class StudentMain
                         System.out.println(e.getMessage() + "\n");
                     }
                 }
-                case 3 ->{ //alterar
-                    System.out.println("Alterando Aluno\n");
-                }
-                case 4 ->{ //inscrever em disciplina
+                case 3 ->{ //inscrever em disciplina
                     int id = Console.readInt("Informe o id do aluno: ");
                     try
                     {
@@ -98,7 +94,7 @@ public class StudentMain
                         System.out.println(e.getMessage() + "\n");
                     }
                 }
-                case 5 ->{ //trancar disciplina
+                case 4 ->{ //trancar disciplina
                     int id = Console.readInt("Informe o ID do aluno: ");
                     try
                     {
@@ -117,7 +113,7 @@ public class StudentMain
                         System.out.println(e.getMessage() + "\n");
                     }
                 }
-                case 6 ->{ //listar alunos
+                case 5 ->{ //listar alunos
                     List<Student> students = studentService.readAll();
                     System.out.println("Alunos matriculados no sistema:\n");
                     for(Student studentInList : students)
@@ -126,7 +122,7 @@ public class StudentMain
                     }
 
                 }
-                case 7 ->{ //listar historico
+                case 6 ->{ //listar historico
                     int id = Console.readInt("Informe a matricula do aluno: ");
                     try
                     {
@@ -139,7 +135,7 @@ public class StudentMain
                         System.out.println(e.getMessage() + "\n");
                     }
                 }
-                case 8 -> { //Listar disciplinas sendo cursadas
+                case 7 -> { //Listar disciplinas sendo cursadas
                     int id = Console.readInt("Informe a matricula do aluno: ");
                     try
                     {
@@ -152,7 +148,7 @@ public class StudentMain
                         System.out.println(e.getMessage() + "\n");
                     }
                 }
-                case 9 -> { //atribuir nota a uma disciplina
+                case 8 -> { //atribuir nota a uma disciplina
                     int id = Console.readInt("Informe a matricula do aluno: ");
                     try
                     {
@@ -169,7 +165,7 @@ public class StudentMain
                         System.out.println(e.getMessage() + "\n");
                     }
                 }
-                case 10 -> loop = false;
+                case 9 -> loop = false;
                 default -> System.out.println("Opção Inválida\n");
             }
         }

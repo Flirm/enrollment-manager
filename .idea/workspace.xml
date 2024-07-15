@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e95799f3-2b9f-465e-85a8-cae113e1e6da" name="Changes" comment="feat: case 5 list all pre-requisites from a discipline&#10;feat: case 6 get approval rate from the discipline in term">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/GenericDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/GenericDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/ClassroomDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/ClassroomDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/DisciplineDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/DisciplineDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/RegistryDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/RegistryDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/StudentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/StudentDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/TeacherDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/dao/impl/TeacherDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Classroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Classroom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Discipline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Discipline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Registry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Registry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/model/Teacher.java" afterDir="false" />
-    </list>
+    <list default="true" id="e95799f3-2b9f-465e-85a8-cae113e1e6da" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,31 +99,7 @@
       <workItem from="1720816933774" duration="504000" />
       <workItem from="1720842896510" duration="3212000" />
       <workItem from="1720897853707" duration="7339000" />
-      <workItem from="1720999851015" duration="2454000" />
-    </task>
-    <task id="LOCAL-00002" summary="add basic-options-ui">
-      <option name="closed" value="true" />
-      <created>1716478326392</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1716478326392</updated>
-    </task>
-    <task id="LOCAL-00003" summary="refactor: rename-classes">
-      <option name="closed" value="true" />
-      <created>1716482364906</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1716482364906</updated>
-    </task>
-    <task id="LOCAL-00004" summary="feat: added model classes">
-      <option name="closed" value="true" />
-      <created>1716482573950</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1716482573950</updated>
+      <workItem from="1720999851015" duration="3010000" />
     </task>
     <task id="LOCAL-00005" summary="feat: added dao factory">
       <option name="closed" value="true" />
@@ -507,16 +469,37 @@
       <option name="project" value="LOCAL" />
       <updated>1720910750354</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="feat: implementing serializable to be able to save and load txt files">
+      <option name="closed" value="true" />
+      <created>1721002697655</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1721002697655</updated>
+    </task>
+    <task id="LOCAL-00052" summary="feat: creating dao methods for load/save operations">
+      <option name="closed" value="true" />
+      <created>1721002746626</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1721002746626</updated>
+    </task>
+    <task id="LOCAL-00053" summary="feat: creating save/load operations in main">
+      <option name="closed" value="true" />
+      <created>1721002777401</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1721002777401</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: implemented TeacherDaoImpl" />
-    <MESSAGE value="feat: started creation of teacher treatment" />
-    <MESSAGE value="refactor: making arraylist instance variables final (might get changed later)" />
     <MESSAGE value="feat: started classroom treatment" />
     <MESSAGE value="feat: added classes to handle registry treatment" />
     <MESSAGE value="feat: added needed exceptions" />
@@ -539,7 +522,10 @@
     <MESSAGE value="feat: presence is now necessary to complete the discipline" />
     <MESSAGE value="refactor: enhance prints&#10;fix: added catch InvalidGradeException" />
     <MESSAGE value="feat: case 5 list all pre-requisites from a discipline&#10;feat: case 6 get approval rate from the discipline in term" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: case 5 list all pre-requisites from a discipline&#10;feat: case 6 get approval rate from the discipline in term" />
+    <MESSAGE value="feat: implementing serializable to be able to save and load txt files" />
+    <MESSAGE value="feat: creating dao methods for load/save operations" />
+    <MESSAGE value="feat: creating save/load operations in main" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: creating save/load operations in main" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

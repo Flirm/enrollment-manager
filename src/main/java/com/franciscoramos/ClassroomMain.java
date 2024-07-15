@@ -38,10 +38,9 @@ public class ClassroomMain
             System.out.println("2. Remover turma\n");
             System.out.println("3. Listar todas as turmas\n");
             System.out.println("4. Listar todas as turmas de uma disciplina\n");
-            System.out.println("5. Alterar turma\n");
-            System.out.println("6. Listar dados de uma turma\n");
-            System.out.println("7. Taxa de aprovação do período por turma\n");
-            System.out.println("8. Voltar\n");
+            System.out.println("5. Listar dados de uma turma\n");
+            System.out.println("6. Taxa de aprovação do período por turma\n");
+            System.out.println("7. Voltar\n");
             int result = Console.readInt("Digite um número entre 1 e 7: ");
 
             switch(result)
@@ -120,10 +119,7 @@ public class ClassroomMain
                         System.out.println(e.getMessage() + "\n");
                     }
                 }
-                case 5 ->{
-                    System.out.println("Alterando turma\n");
-                }
-                case 6 ->{ //listar dados de uma turma
+                case 5 ->{ //listar dados de uma turma
                     int id = Console.readInt("Informe o id da turma: ");
                     try{
                         classroom = classroomService.read(id);
@@ -136,7 +132,7 @@ public class ClassroomMain
                         System.out.println(e.getMessage() + "\n");
                     }
                 }
-                case 7 ->{ //taxa de aprovacao por turma em um periodo
+                case 6 ->{ //taxa de aprovacao por turma em um periodo
                     String term = Console.readLine("Informe o período desejado: ");
                     try{
                         List<Classroom> classrooms = classroomService.readAll().stream().filter((c) -> c.getSchoolTerm().equals(term)).toList();
@@ -149,7 +145,7 @@ public class ClassroomMain
                         System.out.println(e.getMessage() + "\n");
                     }
                 }
-                case 8 -> loop = false;
+                case 7 -> loop = false;
                 default -> System.out.println("Opção Inválida\n");
             }
         }
