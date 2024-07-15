@@ -14,6 +14,7 @@ public class StudentService
 
     public Student create(Student student)
     {
+        student.setId(studentDao.getCounter());
         return studentDao.create(student.getId(), student);
     }
 

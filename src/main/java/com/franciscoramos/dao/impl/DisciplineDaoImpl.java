@@ -11,9 +11,10 @@ import java.util.Map;
 public class DisciplineDaoImpl implements DisciplineDao
 {
     protected Map<Integer, Discipline> disciplinesMap = new LinkedHashMap<>(16);
-    private int counter;
+    private int counter = 0;
 
     public Discipline create(Integer key, Discipline value) {
+        this.setCounter(key + 1);
         return disciplinesMap.put(key, value);
     }
 

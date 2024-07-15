@@ -12,9 +12,10 @@ import java.util.Map;
 public class ClassroomDaoImpl implements ClassroomDao
 {
     protected Map<Integer, Classroom> classroomsMap = new LinkedHashMap<>(16);
-    private int counter;
+    private int counter = 0;
 
     public Classroom create(Integer key, Classroom value) {
+        this.setCounter(key + 1);
         return classroomsMap.put(key, value);
     }
 

@@ -11,9 +11,10 @@ import java.util.Map;
 public class RegistryDaoImpl implements RegistryDao
 {
     protected Map<Integer, Registry> registriesMap = new LinkedHashMap<>(16);
-    private int counter;
+    private int counter = 0;
 
     public Registry create(Integer key, Registry value) {
+        this.setCounter(key + 1);
         return registriesMap.put(key, value);
     }
 

@@ -11,9 +11,10 @@ import java.util.Map;
 public class StudentDaoImpl implements StudentDao
 {
     protected Map<Integer, Student> studentsMap = new LinkedHashMap<>(16);
-    private int counter;
+    private int counter = 0;
 
     public Student create(Integer key, Student value) {
+        this.setCounter(key + 1);
         return studentsMap.put(key, value);
     }
 

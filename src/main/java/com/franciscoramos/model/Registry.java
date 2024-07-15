@@ -11,12 +11,10 @@ public class Registry implements Serializable
     private Student student;
     private Classroom classroom;
     private int id;
-    private static int count = 0;
     private boolean enoughPresence;
 
     public Registry(Student student, Classroom classroom, String schoolTerm)
     {
-        this.id = count++;
         this.student = student;
         this.classroom = classroom;
         this.date = java.time.LocalDate.now().toString();

@@ -15,6 +15,7 @@ public class DisciplineService
 
     public Discipline create(Discipline discipline)
     {
+        discipline.setId(disciplineDao.getCounter());
         return disciplineDao.create(discipline.getId(), discipline);
     }
 

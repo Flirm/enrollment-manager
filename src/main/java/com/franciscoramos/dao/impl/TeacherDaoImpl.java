@@ -11,9 +11,10 @@ import java.util.Map;
 public class TeacherDaoImpl implements TeacherDao
 {
     protected Map<Integer, Teacher> teacherMap = new LinkedHashMap<>(16);
-    private int counter;
+    private int counter = 0;
 
     public Teacher create(Integer key, Teacher value) {
+        this.setCounter(key + 1);
         return teacherMap.put(key, value);
     }
 

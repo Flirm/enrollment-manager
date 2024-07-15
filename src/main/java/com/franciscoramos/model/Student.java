@@ -5,7 +5,6 @@ import java.util.LinkedHashMap;
 
 public class Student implements Serializable
 {
-    private static int count = 0;
     private int id;
     private String name;
     private String email;
@@ -13,7 +12,6 @@ public class Student implements Serializable
 
     public Student(String name, String email)
     {
-        this.id = count++;
         this.name = name;
         this.email = email;
         this.registeredClasses = new LinkedHashMap<>();

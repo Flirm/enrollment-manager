@@ -17,18 +17,17 @@ public class RegistryService
 
     public Registry create(Registry registry, List<Classroom> classrooms)
     {
+        registry.setId(registryDao.getCounter());
         if(!classrooms.contains(registry.getClassroom())){
             throw new InvalidClassroomEnrollException("Incrição não pode ser realizada pois a turma não atende aos parâmetros inseridos.\n");
         }
         List<Discipline> preReqDisciplines = registry.getClassroom().getDiscipline().getPreRequisites();
         List<Discipline> completedDisciplines = registry.getStudent().getRegisteredClasses().values().stream().filter((reg) -> reg.getGrade() >= 60).filter(Registry::getEnoughPresence).map(Registry::getClassroom).map(Classroom::getDiscipline).toList();
-        for(Discipline discipline : preReqDisciplines){
-            System.out.println(discipline);
+
+        if(registry.getStudent().getRegisteredClasses().values().stream().filter((reg) -> reg.getGrade() != -1).map(Registry::getClassroom).map(Classroom::getDiscipline).toList().contains(registry.getClassroom().getDiscipline())) {
+            throw new InvalidClassroomEnrollException("Inscrição não pode ser ralizada pois o aluno já completou ou está cursando esta disciplina\n");
         }
-        System.out.println("complete");
-        for(Discipline discipline : completedDisciplines){
-            System.out.println(discipline);
-        }
+
         if(!new HashSet<>(completedDisciplines).containsAll(preReqDisciplines)){
             throw new InvalidClassroomEnrollException("Incrição não pode ser realizada pois aluno não possuí todos os pré-requisitos.\n");
         }

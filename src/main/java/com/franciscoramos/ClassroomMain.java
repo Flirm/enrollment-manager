@@ -127,7 +127,7 @@ public class ClassroomMain
                         System.out.println("Alunos Inscritos:\n");
                         List<Registry> registries = classroomService.readAllStudents(id);
                         for(Registry r : registries)
-                            System.out.println(r.getStudent().getName() + "\nNota: " + r.getGrade() + "\nPresença: " + (r.getEnoughPresence() ? "Suficiente" : "Insuficiente" + "\n"));
+                            System.out.println(r.getStudent().getName() + "\nNota: " + r.getGrade() + "\nPresença: " + (r.getEnoughPresence() ? "Suficiente" : "Insuficiente" + "\n") + "\n");
                     }catch(EntityNotFoundException e) {
                         System.out.println(e.getMessage() + "\n");
                     }

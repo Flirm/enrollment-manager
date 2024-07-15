@@ -15,6 +15,7 @@ public class ClassroomService
 
     public Classroom create(Classroom classroom)
     {
+        classroom.setId(classroomDao.getCounter());
         return classroomDao.create(classroom.getId(), classroom);
     }
 

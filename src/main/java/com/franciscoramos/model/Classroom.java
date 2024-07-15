@@ -5,7 +5,6 @@ import java.util.ArrayList;
 
 public class Classroom implements Serializable
 {
-    private static int count = 0;
     private int id;
     private String schoolTerm;
     private Discipline discipline;
@@ -14,7 +13,6 @@ public class Classroom implements Serializable
 
     public Classroom(Discipline discipline, String schoolTerm, Teacher teacher)
     {
-        this.id = count++;
         this.schoolTerm = schoolTerm;
         this.discipline = discipline;
         this.teacher = teacher;

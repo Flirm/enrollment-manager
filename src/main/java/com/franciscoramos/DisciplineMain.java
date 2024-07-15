@@ -31,7 +31,7 @@ public class DisciplineMain
             System.out.println("3. Listar todas as disciplinas\n");
             System.out.println("4. Alterar carga horária da disciplina\n");
             System.out.println("5. Listar Pré-Requisitos de uma disciplina\n");
-            System.out.println("6. Quantidade de Alunos aprovados em uma disciplina\n");
+            System.out.println("6. Quantidade de Alunos aprovados por disciplina no período\n");
             System.out.println("7. Voltar\n");
             int result = Console.readInt("Digite um número entre 1 e 5: ");
 
@@ -101,21 +101,22 @@ public class DisciplineMain
                         System.out.println(e.getMessage() + "\n");
                     }
                 }
-                case 6 ->{ //quant de alunos aprovados na disciplina no periodo x
-                    int id = Console.readInt("Informe o id da disciplina: ");
+                case 6 ->{ //quant de alunos aprovados por disciplina no periodo
                     try{
-                        discipline = disciplineService.read(id);
+                        List<Discipline> disciplines = disciplineService.readAll();
                         String term = Console.readLine("Informe o período desejado: ");
-                        List<Classroom> classrooms = discipline.getClassrooms().stream().filter((c) -> Objects.equals(c.getSchoolTerm(), term)).toList();
-                        int total = 0;
-                        int approved = 0;
-                        for(Classroom classroom : classrooms){
-                            total += classroom.getStudentCount();
-                            approved += classroom.getApprovedStudentCount();
+                        for(Discipline d : disciplines) {
+                            List<Classroom> classrooms = d.getClassrooms().stream().filter((c) -> Objects.equals(c.getSchoolTerm(), term)).toList();
+                            int total = 0;
+                            int approved = 0;
+                            for (Classroom classroom : classrooms) {
+                                total += classroom.getStudentCount();
+                                approved += classroom.getApprovedStudentCount();
+                            }
+                            System.out.println("\nDisciplina: " + d.getName());
+                            System.out.println("Neste período foram aprovados " + approved + " em um total de " + total + " alunos.");
+                            System.out.println("Taxa de aprovação: " + ((float) approved / total) * 100 + "%\n");
                         }
-                        System.out.println("\nDisciplina: " + discipline.getName());
-                        System.out.println("Neste período foram aprovados " + approved + " em um total de " + total + " alunos.");
-                        System.out.println("Taxa de aprovação: " + ((float)approved/total)*100 + "%\n");
                     }catch(EntityNotFoundException e){
                         System.out.println(e.getMessage() + "\n");
                     }

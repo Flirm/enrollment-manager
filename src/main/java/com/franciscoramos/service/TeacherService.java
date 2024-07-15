@@ -14,6 +14,7 @@ public class TeacherService
 
     public Teacher create(Teacher teacher)
     {
+        teacher.setId(teacherDao.getCounter());
         return teacherDao.create(teacher.getId(), teacher);
     }
 
