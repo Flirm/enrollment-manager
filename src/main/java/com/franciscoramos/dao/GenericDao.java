@@ -1,6 +1,7 @@
 package com.franciscoramos.dao;
 
 import java.util.List;
+import java.util.Map;
 
 public interface GenericDao<K, V>
 {
@@ -9,4 +10,8 @@ public interface GenericDao<K, V>
     V remove(K key);
     V read(K key);
     List<V> readAll();
+    Map<Integer, V> getMap();
+    void setMap(Map<Integer, V> map);
+    Integer getCounter();
+    void setCounter(Integer counter);
 }

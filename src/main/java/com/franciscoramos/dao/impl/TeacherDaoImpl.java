@@ -6,10 +6,12 @@ import com.franciscoramos.model.Teacher;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 public class TeacherDaoImpl implements TeacherDao
 {
-    private final LinkedHashMap<Integer, Teacher> teacherMap = new LinkedHashMap<>(16);
+    protected Map<Integer, Teacher> teacherMap = new LinkedHashMap<>(16);
+    private int counter;
 
     public Teacher create(Integer key, Teacher value) {
         return teacherMap.put(key, value);
@@ -29,5 +31,21 @@ public class TeacherDaoImpl implements TeacherDao
 
     public List<Teacher> readAll() {
         return new ArrayList<>(teacherMap.values());
+    }
+
+    public Map<Integer, Teacher> getMap() {
+        return this.teacherMap;
+    }
+
+    public void setMap(Map<Integer, Teacher> map) {
+        this.teacherMap = map;
+    }
+
+    public Integer getCounter() {
+        return this.counter;
+    }
+
+    public void setCounter(Integer counter) {
+        this.counter = counter;
     }
 }
