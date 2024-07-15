@@ -1,8 +1,9 @@
 package com.franciscoramos.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Discipline
+public class Discipline implements Serializable
 {
     private static int count = 0;
     private int id;

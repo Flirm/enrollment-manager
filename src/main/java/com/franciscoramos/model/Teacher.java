@@ -1,8 +1,9 @@
 package com.franciscoramos.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Teacher
+public class Teacher implements Serializable
 {
     private static int count = 0;
     private int id;

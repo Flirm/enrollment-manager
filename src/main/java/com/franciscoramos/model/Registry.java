@@ -1,7 +1,9 @@
 package com.franciscoramos.model;
 
 
-public class Registry
+import java.io.Serializable;
+
+public class Registry implements Serializable
 {
     private int grade;
     private String date;

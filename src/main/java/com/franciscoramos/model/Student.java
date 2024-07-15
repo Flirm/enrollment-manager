@@ -1,8 +1,9 @@
 package com.franciscoramos.model;
 
+import java.io.Serializable;
 import java.util.LinkedHashMap;
 
-public class Student
+public class Student implements Serializable
 {
     private static int count = 0;
     private int id;
