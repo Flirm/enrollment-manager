@@ -1,5 +1,6 @@
 package com.franciscoramos;
 
+import com.franciscoramos.exception.DisciplineIsPreRequisiteException;
 import com.franciscoramos.exception.DisciplineWithClassroomsException;
 import com.franciscoramos.exception.EntityNotFoundException;
 import com.franciscoramos.model.Classroom;
@@ -61,7 +62,8 @@ public class DisciplineMain
                     try{
                         disciplineService.remove(id);
                         System.out.println("Disciplina " + id + " removida com sucesso\n");
-                    }catch(EntityNotFoundException | DisciplineWithClassroomsException e){
+                    }catch(EntityNotFoundException | DisciplineWithClassroomsException |
+                           DisciplineIsPreRequisiteException e){
                         System.out.println(e.getMessage() + "\n");
                     }
                 }

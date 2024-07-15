@@ -1,6 +1,7 @@
 package com.franciscoramos.service;
 
 import com.franciscoramos.dao.DisciplineDao;
+import com.franciscoramos.exception.DisciplineIsPreRequisiteException;
 import com.franciscoramos.exception.DisciplineWithClassroomsException;
 import com.franciscoramos.exception.EntityNotFoundException;
 import com.franciscoramos.model.Discipline;
@@ -28,6 +29,9 @@ public class DisciplineService
     public Discipline remove(int id)
     {
         Discipline discipline = read(id);
+
+        List<Discipline> disciplines = disciplineDao.readAll().stream().filter((d) -> d.getPreRequisites().contains(discipline)).toList();
+        if(!disciplines.isEmpty()) throw new DisciplineIsPreRequisiteException("Esta disciplina é pre-requisito de outrem e não pode ser removida");
 
         if(discipline.getClassrooms() == null || discipline.getClassrooms().isEmpty())
             disciplineDao.remove(id);

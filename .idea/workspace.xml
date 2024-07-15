@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e95799f3-2b9f-465e-85a8-cae113e1e6da" name="Changes" comment="" />
+    <list default="true" id="e95799f3-2b9f-465e-85a8-cae113e1e6da" name="Changes" comment="refactor: removing useless code">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/exception/DisciplineIsPreRequisiteException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/franciscoramos/service/DisciplineService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/franciscoramos/service/DisciplineService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,14 +104,8 @@
       <workItem from="1720842896510" duration="3212000" />
       <workItem from="1720897853707" duration="7339000" />
       <workItem from="1720999851015" duration="3010000" />
-    </task>
-    <task id="LOCAL-00005" summary="feat: added dao factory">
-      <option name="closed" value="true" />
-      <created>1716488503958</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1716488503958</updated>
+      <workItem from="1721061002355" duration="236000" />
+      <workItem from="1721073314177" duration="337000" />
     </task>
     <task id="LOCAL-00006" summary="feat: added base dao classes and interfaces">
       <option name="closed" value="true" />
@@ -493,14 +491,21 @@
       <option name="project" value="LOCAL" />
       <updated>1721002777401</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="refactor: removing useless code">
+      <option name="closed" value="true" />
+      <created>1721061213664</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1721061213664</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: started classroom treatment" />
     <MESSAGE value="feat: added classes to handle registry treatment" />
     <MESSAGE value="feat: added needed exceptions" />
     <MESSAGE value="feat: listing and changing teacher functions" />
@@ -525,7 +530,8 @@
     <MESSAGE value="feat: implementing serializable to be able to save and load txt files" />
     <MESSAGE value="feat: creating dao methods for load/save operations" />
     <MESSAGE value="feat: creating save/load operations in main" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: creating save/load operations in main" />
+    <MESSAGE value="refactor: removing useless code" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: removing useless code" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
